@@ -3,7 +3,7 @@
 from fake_useragent import UserAgent
 import random
 
-API = 'http://api.xdaili.cn/xdaili-api//greatRecharge/getGreatIp?spiderId=cavnkfabvajfhv12fa1v4fv12g1ba2b1gsgb&orderno=vanfjvadfb1sg5b4s4bf4b1s2n&returnType=2&count=1'
+API = 'http://api.xdaili.cn/xdaili-api//greatRecharge/getGreatIp?spiderId=ce69f66ac42f49c0a103f0f94961df08&orderno=YZ20214196389pnXYdA&returnType=2&count=1'
 
 INIT_URL = 'http://www.dianping.com/fuzhou/ch75/g34318p{}'
 CSS_URL = 'http://s3plus.meituan.net/v1/mss_0a06a471f9514fc79c981b5466f56b91/svgtextcss/f8198800680006c0424b3c7412023ee7.css'
