@@ -9,6 +9,7 @@ def parse(li, svg_num_url, svg_font_url, css_url):
     """
     解析数据
     """
+    # dict 函数用于创建一个字典
     data = dict()
     # 店铺名称
     data['name'] = li.css('.txt .tit > a > h4::text').extract_first(DEFAULT_NAME)
@@ -51,8 +52,8 @@ def parse(li, svg_num_url, svg_font_url, css_url):
     # print(data['detail_address'])
 
     # 美食分类
-    type_class_list = re.findall(r'class="(.*?)">', li.css('.txt .tag-addr > a:nth-child(1) > span').extract_first(), re.S)[1:]
-    data['food_type'] = get_completed_font_425(svg_font_url, css_url, type_class_list)
+    # type_class_list = re.findall(r'class="(.*?)">', li.css('.txt .tag-addr > a:nth-child(1) > span').extract_first(), re.S)[1:]
+    # data['food_type'] = get_completed_font_425(svg_font_url, css_url, type_class_list)
     # 地址
     address_class_list = re.findall(r'class="(.*?)">', li.css('.txt .tag-addr > a:nth-child(3) > span').extract_first(), re.S)[1:]
     data['fuzzy_address'] = get_completed_font_425(svg_font_url, css_url, address_class_list)
@@ -61,8 +62,8 @@ def parse(li, svg_num_url, svg_font_url, css_url):
     # data['detail_address'] = get_completed_font_425(svg_font_url, css_url, detail_address_class_list)
     # print(data['detail_address'])
     # 推荐菜
-    data['recommend'] = '|'.join(re.findall('blank.*?>(.*?)</a>', li.css('.txt .recommend').extract()[0], re.S))
-    return data
+    # data['recommend'] = '|'.join(re.findall('blank.*?>(.*?)</a>', li.css('.txt .recommend').extract()[0], re.S))
+    # return data
 
 def get_completed_nums(svg_num_url, css_url, class_list):
     """
